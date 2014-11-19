@@ -1,0 +1,321 @@
+﻿<div>
+    <div class="panel-title">
+        <span class="{{iconClass}}"></span>
+        <span>{{panelTitle}}</span>
+
+        <div class="panel-controls">
+            <button ng-click="closeCallback()" class="button panel-control-button"><span class="icon-cancel-24"></span><span>{{"cancel" | translate}}</span></button>
+            <button ng-click="okCallback()" class="button panel-control-button filename-ok"><span class="icon-ok-24"></span><span>{{"ok" | translate}}</span></button>
+        </div>
+    </div>
+    <div class="panel-content">
+        <div class="filename-input-wrapper">
+            <img class="filename-delete" src="images/file-name-delete.png" alt="" tabindex="0" />
+            <input type="text" class="filename-input" placeholder="{{placeHolder}}" ng-model="model" />
+        </div>
+
+        <div id="keyboard_image">
+        </div>
+
+        <div class="keyboard">
+            <ul class="clearfix" class="numbers">
+                <li>
+                    <button class="key symbol">
+                        <span class="off">1
+                        </span>
+                        <span class="on">~
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">2
+                        </span>
+                        <span class="on">#
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">3
+                        </span>
+                        <span class="on">$
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">4
+                        </span>
+                        <span class="on"></span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">5
+                        </span>
+                        <span class="on">%
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">6
+                        </span>
+                        <span class="on">^
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">7
+                        </span>
+                        <span class="on">&amp;
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">8
+                        </span>
+                        <span class="on">*
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">9
+                        </span>
+                        <span class="on">&lt;
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">0
+                        </span>
+                        <span class="on">&gt;
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">(
+                        </span>
+                        <span class="on">+
+                        </span>
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        <span class="off">)
+                        </span>
+                        <span class="on">=
+                        </span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="clearfix" class="qwerty">
+                <li>
+                    <button class="key letter">
+                        q
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        w
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        e
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        r
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        t
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        y
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        u
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        i
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        o
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        p
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        /
+                    </button>
+                </li>
+            </ul>
+            <ul class="clearfix" class="asdfg">
+                <li>
+                    <button class="key capslock caps">
+                        <img height="40" src="images/key_caps.png" width="40" />
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        a
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        s
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        d
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        f
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        g
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        h
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        j
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        k
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        l
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        ;
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        '
+                    </button>
+                </li>
+            </ul>
+            <ul class="clearfix" class="zxcvb">
+                <li>
+                    <button class="key shift">
+                        <img height="40" src="images/key_shift.png" width="40" />
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        z
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        x
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        c
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        v
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        b
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        n
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        m
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        ,
+                    </button>
+                </li>
+                <li>
+                    <button class="key letter">
+                        .
+                    </button>
+                </li>
+                <li>
+                    <button class="key delete lastitem" id="delete">
+                        <img height="40" src="images/key_delete.png" width="40" />
+                    </button>
+                </li>
+            </ul>
+            <ul class="clearfix" class="bottomrow">
+                <li>
+                    <button class="key symbols">
+                        <img height="40" src="images/key_symbols.png" width="40" />
+                    </button>
+                </li>
+                <li>
+                    <button class="key space lastitem spacebar"></button>
+                </li>
+                <li>
+                    <button class="key symbol">
+                        @
+                    </button>
+                </li>
+                <li>
+                    <button class="key symbol com">
+                        .com
+                    </button>
+                </li>
+                <!-- <li>
+                    <button class="key selected" class="return">
+                        Return
+                    </button>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</div>

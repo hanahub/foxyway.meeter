@@ -1,0 +1,407 @@
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+body,
+ul,
+li {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	padding-top: 2px;
+}
+
+body {
+	background-color: #a71f23; /*#3e77d1;*/
+	font-family: 'Liberation Sans', 'Xerox Sans', 'Arial', sans-serif;
+	font-size: 16px;
+	padding: 5px;
+}
+
+input[type='text'] {
+	font-size: 20px;
+}
+
+input[type='password'] {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 100%;
+	margin: 0 0 10px;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+/* 
+ *	Buttons 
+ */
+
+button,
+.button {
+	position: relative;
+	font-size: 16px;
+	font-family: 'Liberation Sans', 'Xerox Sans', 'Arial', sans-serif;
+	font-weight: normal;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	outline: none;
+	margin: 0;
+	padding: 4px 6px;
+	border-radius: 5.6px;
+	color: #000;
+	vertical-align: middle;
+	line-height: 31px;
+	text-shadow: 0 1px 0px #fff;
+	border: 1px solid #6b6b6b;
+	background-color: #ebebeb;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(50%,#eaeaea), color-stop(51%,#e3e3e3), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top, #ebebeb 0%,#eaeaea 50%,#e3e3e3 51%,#ededed 100%);
+	box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, .5), inset -1px -1px 0px 0px rgba(0,0,0,.1);
+}
+
+	button [class^=icon-],
+	.button [class^=icon-] {
+		vertical-align: middle;
+		margin-right: 4px;
+	}
+
+	button:active,
+	.button:active,
+	.button-active,
+	.button-selected {
+		color: #000;
+		text-shadow: 0 1px 0px #63a0fc;
+		border-color: #1a468b;
+		background: #80abf6;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80abf6), color-stop(50%,#77a5f8), color-stop(51%,#73a2f9), color-stop(100%,#93bdff));
+		background: -webkit-linear-gradient(top, #80abf6 0%,#77a5f8 50%,#73a2f9 51%,#93bdff 100%);
+	}
+
+	button.disabled,
+	body button.disabled:active,
+	button[disabled],
+	button[disabled]:active {
+		opacity: .3;
+		border: 1px solid #6b6b6b;
+		background-color: #ebebeb;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(50%,#eaeaea), color-stop(51%,#e3e3e3), color-stop(100%,#ededed));
+		background: -webkit-linear-gradient(top, #ebebeb 0%,#eaeaea 50%,#e3e3e3 51%,#ededed 100%);
+	}
+
+/* 
+ *  Select button 
+ */
+
+.select-button {
+	padding-right: 32px;
+	height: 48px;
+}
+
+	.select-button:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		display: block;
+		background: red;
+		width: 25px;
+		height: 100%;
+		border-left: solid 1px #8f8f8f;
+		border-top-right-radius: 5.6px;
+		border-bottom-right-radius: 5.6px;
+		background: url(/images/downUpArrow.png) no-repeat 50% 50%, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#c0c0c0));
+		background: url(/images/downUpArrow.png) no-repeat 50% 50%, -webkit-linear-gradient(top, #e8e8e8 0%,#c0c0c0 100%);
+		box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, .5), inset -1px -1px 0px 0px rgba(255, 255, 255, .5);
+	}
+
+.select-button-direction-up:after {
+	background: url(/images/upDownArrow.png) no-repeat 50% 50%, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8e8e8), color-stop(100%,#c0c0c0));
+	background: url(/images/upDownArrow.png) no-repeat 50% 50%, -webkit-linear-gradient(top, #e8e8e8 0%,#c0c0c0 100%);
+}
+
+.select-button:active:after,
+.select-button.button-active:after,
+.select-button-direction-up:active:after {
+	border-color: #1a468b;
+	background: url(/images/cancel_small.png) no-repeat 50% 50%, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#95bfff), color-stop(100%,#5488ee));
+	background: url(/images/cancel_small.png) no-repeat 50% 50%, -webkit-linear-gradient(top, #95bfff 0%,#5488ee 100%);
+}
+
+/* 
+ *  Button sizes
+ */
+
+.button-big {
+	white-space: normal;
+	line-height: normal;
+	height: 70px;
+	vertical-align: top;
+}
+
+	.button-big [class^='icon-'] {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+	}
+
+	.button-big .button-title {
+		position: absolute;
+		top: 6px;
+		left: 43px;
+		height: 32px;
+		display: -webkit-box;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+		line-height: 18px;
+		margin-right: 28px;
+		font-weight: bold;
+	}
+
+	.button-big .button-label {
+		font-weight: normal;
+		position: absolute;
+		top: 42px;
+	}
+
+.button-panel {
+	height: 105px;
+}
+
+.button-two-line {
+	line-height: 1;
+	white-space: normal;
+	min-height: 54px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+/* 
+ *	Tabs 
+ */
+
+.tab-set {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.tab-strip {
+	position: relative;
+	top: 77px;
+	left: 0;
+	margin: 0px;
+	height: 50px;
+	z-index: 2;
+}
+
+.tab {
+	font-weight: bold;
+	font-size: 1.125em;
+	width: 150px;
+	float: left;
+	height: 48px;
+	line-height: 1.1;
+	cursor: pointer;
+	border-top-left-radius: 5.6px;
+	border-top-right-radius: 5.6px;
+	padding: 4px 6px;
+	margin-left: 2px;
+	overflow: hidden;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #5a5552;
+	background: -webkit-linear-gradient(top, #dddddd, #a6a6a6);
+	background: -webkit-gradient(linear, center top, center bottom, from(#dddddd), to(#a6a6a6));
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), inset 0 -1px 0 rgba(255, 255, 255, 0.35), inset 1px 0 0 rgba(255, 255, 255, 0.35), inset -1px 0 0 rgba(255, 255, 255, 0.35);
+	color: #000;
+	text-decoration: none;
+}
+
+	.tab.active {
+		background: #e8e8e8;
+		border: 1px solid #5a5552;
+		border-bottom: 1px solid #e8e8e8;
+	}
+
+.tab-content {
+	border: 1px solid #5a5552;
+	display: none;
+}
+
+.tab-strip .tab:first-child {
+	margin-left: 0px;
+}
+
+.tab-strip .tab.active {
+	-webkit-box-shadow: inset 0 1px 0 #ffffff, inset 1px 0 0 #ffffff, inset -1px 0 0 #ffffff;
+	height: 49px;
+}
+
+.tab-content {
+	position: absolute;
+	top: 124px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 5.6px;
+	border-top-left-radius: 0;
+	-webkit-box-shadow: inset 0 -1px 0 #ffffff, inset 1px 0 0 #ffffff, inset -1px 0 0 #ffffff, inset 0 1px 0 #ffffff;
+	padding: 11px;
+	background: #e8e8e8;
+}
+
+	.tab-content.full-strip {
+		border-top-right-radius: 0;
+	}
+
+/*
+*	Keyboard
+*/
+
+.keyboard {
+	margin: 6px auto 0;
+	width: 100%;
+}
+
+.keyboard ul {
+	list-style-type: none;
+	margin: 0 auto;
+}
+
+.keyboard li {
+	float: left;
+}
+
+.keyboard button {
+	font-size: 1.125em;
+	font-weight: bold;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	outline: none;
+	padding: 0 12px 0 12px;
+}
+
+	.keyboard button.key {
+		display: block;
+		width: 60px;
+		height: 49px;
+		margin: 0 1px 0 2px;
+	}
+
+.keyboard .key:active, 
+.keyboard .keydown,
+.keyboard .key.selected:active {
+	
+}
+
+.keyboard .key.selected {
+    color: #000;
+    text-shadow: 0 1px 0px #b5d9ff;
+    border: 1px solid #16448e;
+    background: transparent -webkit-linear-gradient(top, #85aff4 1%, #7eaaf4 45%, #71a1f6 46%, #95befe 99%);
+    -webkit-box-shadow: inset 0 1px 0 #b5d9ff, inset 0 -1px 0 #98c9f8, inset -1px 0 #98c9f8, inset 1px 0 #7dbaf2, 0 1px 0 #ffffff, 1px 0 1px rgba(22, 68, 142, 0.1), -1px 0 1px rgba(22, 68, 142, 0.1);
+}
+
+.keyboard .on {
+	display: none;
+}
+
+.keyboard .uppercase {
+	text-transform: uppercase;
+}
+
+.keyboard .numbers {
+	margin-left: 3px;
+}
+
+.keyboard .qwerty {
+	margin-left: 35px;
+}
+
+.keyboard .asdfg {
+	margin-left: 3px;
+}
+
+.keyboard .zxcvb {
+	margin-left: 3px;
+}
+
+.keyboard .bottomrow {
+	margin-left: 3px;
+}
+
+.keyboard .delete {
+	width: 91px !important;
+}
+
+.keyboard .enter {
+	width: 85px !important;
+}
+
+.keyboard .shift {
+	width: 92px !important;
+}
+
+.keyboard .symbols {
+	width: 117px !important;
+}
+
+.keyboard .spacebar {
+	width: 350px !important;
+}
+
+.keyboard .com {
+	width: 97px !important;
+}
+
+.keyboard .language {
+	width: 97px !important;
+}
+
+.keyboard .return {
+	width: 117px !important;
+}
+
+.filename-input-wrapper {
+	border: solid 1px #3b8400;
+	border-radius: 5.6px;
+	background: #c5eb94;
+	padding: 5px;
+	position: relative;
+}
+
+.filename-input {
+	border: solid 1px #78787a;
+	border-radius: 5.6px;
+	background: #fdfdfd;
+	box-shadow: 1px 1px 0 #dedede;
+	height: 48px;
+	padding: 12px;
+	width: 100%;
+	font-size: 14px;
+}
+
+.filename-delete {
+	position: absolute;
+	top: 10px;
+	right: 11px;
+}
