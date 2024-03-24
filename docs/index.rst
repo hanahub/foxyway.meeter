@@ -4,6 +4,7 @@ Foxway Scan
 
 Contents:
 
+
 .. toctree::
    :maxdepth: 2
 
